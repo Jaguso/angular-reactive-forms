@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Ingresa tus datos</h1>
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <label>
+      Nombre: 
+      <input type="text" formControlName="firstName">
+    </label>
+    <label>
+      Apellido:
+      <input type="text" formControlName="lastName">
+    </label>
+    <label>
+      Email:
+      <input type="text" formControlName="email">
+    </label>
+    <label>
+      Contraseña:
+      <input type="password" formControlName="password"> 
+    </label>
+    <button class="button" type="submit" [disabled]="!profileForm.valid">Submit</button>
+
+  </form>
+</div>
